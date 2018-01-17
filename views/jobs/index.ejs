@@ -1,0 +1,14 @@
+<ul>
+  <%= jobs.forEach((job)=> { %>
+    <li>
+      <%= job.company %>
+        <%= job.url %>
+          <%= job.location %>
+            <%= job.PersonOfContact %>
+              <%= job.PersonOfContact2 %>
+                <%= job.email %>
+                  <%= job.notes %>
+                    <%= job.phone %>
+    </li>
+  <% }) %>
+</ul>
