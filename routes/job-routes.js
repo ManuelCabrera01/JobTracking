@@ -52,7 +52,7 @@ jobRouter.post('/jobs/new', (req, res, next) => {
 });
 // end of saving jobs aplications
 
-jobRouter.get('/jobId/:id', (req,res,next)=>{
+jobRouter.get('/jobs/:id', (req,res,next)=>{
   const jobId= req.params.id;
   Job.findById(jobId,(err,theJob)=>{
     if(err){
