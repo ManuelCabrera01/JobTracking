@@ -27,10 +27,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 // ....my routes
-const index = require('./routes/index');
-app.use('/', index);
-const jobsRoutes = require ('./routes/jobs');
-app.use ('/jobs',jobsRoutes);
+const myIndexRoutes = require('./routes/index');
+app.use('/', myIndexRoutes);
+
+const myJobsRoutes = require ('./routes/job-routes');
+app.use ('/', myJobsRoutes);
 // ....my routes
 
 
