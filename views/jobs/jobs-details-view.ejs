@@ -1,23 +1,28 @@
-<h1><%= job.company %> </h1>
+<h1> Company Name:  <%= job.company %> </h1>
 
-<br>
-<h3><%= job.url %></h3>
-<br>
-<h3><%= job.location %></h3>
-<br>
-<h3><%= job.personOfContact %></h3>
-<br>
-<h3><%= job.personOfContact2 %></h3>
-<br>
-<h3><%= job.email %></h3>
-<br>
-<h3><%= job.note%></h3>
-<br>
-<h3><%= job.phone %></h3>
+
+<h3> Email/Webside:  <%= job.url %></h3>
+
+<h3> Address:  <%= job.location %></h3>
+
+<h3>Contac Name:  <%= job.personOfContact %></h3>
+
+<h3>Contac Name2:  <%= job.personOfContact2 %></h3>
+
+<h3> Email(contact): <%= job.email %></h3>
+
+<h3>Notes:   <%= job.note%></h3>
+
+<h3>Phone Number:  <%= job.phone %></h3>
 <hr>
 <a href="/jobs/<%= job._id %>/edit">
-  Edit
+  Modify this company
 </a>
+<br>
+<a href="/jobs">
+< -- go back
+</a>
+<hr>
 <form method="post" action="/jobs/<%= job._id %>/delete">
   <button> Delete </button>
 </form>

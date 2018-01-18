@@ -1,0 +1,48 @@
+
+<form method="post" action="/jobs/<%= job._id %>">
+
+<label for="job-company-input">name of the company</label>
+<input type="text" name="jobCompany" id="job-company-input" value="<%= job.company %>">
+
+
+<br>
+
+<label for="job-url-input">url to the company that you apply</label>
+<input type="text" name="jobUrl" id="job-url-input" value="<%= job.url %>">
+
+<br>
+
+<label for="job-location-input">address</label>
+<input type="text" name="jobLocation" id="job-location-input" value="<%= job.location %>">
+
+<br>
+
+<label for="job-personOfContact-input">person of contact</label>
+<input type="text" name="jobPersonOfContact" id="job-personOfContact-input" value="<%= job.personOfContact %>">
+
+<br>
+
+<label for="job-personOfContact2-input">person of contact #2</label>
+<input type="text" name="jobPersonOfContact2" id="job-personOfContact2-input" value="<%= job.personOfContact2 %>">
+
+<br>
+
+<label for="job-email-input">email</label>
+<input type="text" name="jobEmail" id="job-email-input" value="<%= job.email %>">
+
+<br>
+
+<label for="job-notes-input">notes</label>
+<textarea type="text" name="jobNotes" id="job-notes-input" value="<%= job.notes %>">
+  </textarea>
+
+<br>
+
+<label for="job-phone-input">phone #</label>
+<input type="number" name="jobPhone" id="job-phone-input" value="<%= job.phone %>">
+
+<br>
+
+<button type="submit">save</button>
+
+</form>

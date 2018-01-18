@@ -4,7 +4,7 @@
 
   <% job.forEach((oneJob)=> { %>
     <li>
-      <%= oneJob.company %>
+  <h3>company name: </h3>   <%= oneJob.company %>
       <br>
         <!-- <%= oneJob.url %>
         <br>
@@ -18,7 +18,7 @@
                 <br> -->
                   <!-- <%= oneJob.notes %> -->
                   <!-- <br> -->
-                    <%= oneJob.phone %>
+                <h3>phone #: </h3>   <%= oneJob.phone %>
                     <a href="/jobs/<%= oneJob._id %>">View Details</a>
                     <hr>
 

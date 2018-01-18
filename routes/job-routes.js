@@ -52,6 +52,8 @@ jobRouter.post('/jobs/new', (req, res, next) => {
 });
 // end of saving jobs aplications
 
+// show one particular job
+
 jobRouter.get('/jobs/:id', (req,res,next)=>{
   const jobId= req.params.id;
   Job.findById(jobId,(err,theJob)=>{
@@ -64,5 +66,60 @@ jobRouter.get('/jobs/:id', (req,res,next)=>{
     });
   });
 });
+
+// end of find one particular jobRouter
+
+jobRouter.get('/jobs/:id/edit', (req, res ,nex) => {
+  const jobId = req.params.id;
+  Job.findById(jobId, (err, theJob) => {
+    if (err) {
+      next(err);
+      return;
+    }
+
+    res.render('jobs/edit-jobs-view.ejs', {
+      job : theJob
+    });
+  });
+});
+
+jobRouter.post('/jobs/:id', (req, res, next) => {
+  const jobId= req.params.id;
+
+  const jobChanges = {
+    company: req.body.jobCompany,
+    url: req.body.jobUrl,
+    location: req.body.jobLocation,
+    personOfContact: req.body.jobPersonOfContact,
+    personOfContact2: req.body.jobPersonOfContact2,
+    email: req.body.jobEmail,
+    notes: req.body.jobNotes,
+    phone: req.body.jobPhone
+  };
+
+  Job.findByIdAndUpdate( jobId, jobChanges, (err, theJob) => {
+    if (err) {
+      next(err);
+      return;
+      }
+      res.redirect('/jobs');
+
+    }
+  );
+  });
+jobRouter.post('/jobs/:id/delete', (req, res, next) =>{
+
+  const jobId =req.params.id;
+  Job.findByIdAndRemove(jobId, (err, theJob) => {
+
+    if(err){
+      next(err);
+      return;
+
+    }
+    res.redirect('/jobs')
+  });
+});
+
 
 module.exports = jobRouter;
