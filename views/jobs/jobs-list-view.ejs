@@ -8,9 +8,8 @@
       <ul>
         <% job.forEach((oneJob)=> { %>
       <li>
-        <h3>company : </h3>
-        <h3><%= oneJob.company %></h3>
-          <p> <%= oneJob.url %></p>
+        <h2><%= oneJob.company %></h2>
+          <a href="<%= oneJob.url %>"><p><%= oneJob.url %></p></a>
           <a href="/jobs/<%= oneJob._id %>"><h5>view details</h5></a>
         </li>
         <% }) %>
@@ -18,7 +17,7 @@
     </div>
 </div>
 </div>
-
+<br>
 <a href="/jobs/new">
  Add a company
 </a>

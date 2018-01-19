@@ -1,39 +1,117 @@
 <form action="/jobs/new" method="post">
+<fieldset>
 
+  <legend>job aplications tracking tool</legend>
+  <!--
   <label for="company">name of the company</label>
   <input type="text" name="jobCompany" id="company">
   <br>
+   -->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="company">name of the company</label>
+    <div class="col-md-4">
+    <input id="giftID" name="jobCompany" type="text" placeholder="Gift ID" id="company" class="form-control input-md">
 
-  <label for="url">url to the company that you apply</label>
+    </div>
+  </div>
+<br>
+  <!-- <label for="url">url to the company that you apply</label>
   <input type="text" name="jobUrl" id="url">
-  <br>
+  <br> -->
 
-  <label for="location">address</label>
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="url">url of company</label>
+    <div class="col-md-4">
+    <input id="giftID" name="jobUrl" type="text" placeholder="url/email" id="url" class="form-control input-md">
+
+    </div>
+  </div>
+<br>
+
+  <!-- <label for="location">address</label>
   <input type="text" name="joLocation" id="location">
-  <br>
+  <br> -->
 
-  <label for="personOfContact">person of contact</label>
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="location">address</label>
+    <div class="col-md-4">
+    <input id="giftID" name="jobLocation" type="text" placeholder="address or location" id="location" class="form-control input-md">
+
+    </div>
+  </div>
+<br>
+  <!-- <label for="personOfContact">person of contact</label>
   <input type="text" name="jobPersonOfContact" id="personOfContact">
-  <br>
+  <br> -->
 
-  <label for="personOfContact2">person of contact #2</label>
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="personOfContact">person of contact 1</label>
+    <div class="col-md-4">
+    <input id="giftID" name="jobPersonOfContact" type="text" placeholder="person of contact" id="personOfContact" class="form-control input-md">
+
+    </div>
+  </div>
+<br>
+  <!-- <label for="personOfContact2">person of contact #2</label>
   <input type="text" name="jobPersonOfContact2" id="personOfContact2">
+  <br> -->
+
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="personOfContact2">person of contact 2</label>
+    <div class="col-md-4">
+    <input id="giftID" name="jobPersonOfContact2" type="text" placeholder="person of contact 2" id="personOfContact2" class="form-control input-md">
+
+    </div>
+  </div>
   <br>
 
-  <label for="email">email</label>
+  <!-- <label for="email">email</label>
   <input type="text" name="jobEmail" id="email">
-  <br>
+  <br> -->
 
-  <label for="notes">notes</label>
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="email">email for conatac</label>
+    <div class="col-md-4">
+    <input id="giftID" name="jobEmail" type="text" placeholder="Gift ID" id="email" class="form-control input-md">
+
+    </div>
+  </div>
+
+<br>
+
+  <!-- <label for="notes">notes</label>
   <input type="text" name="jobNotes" id="notes">
-  <br>
+  <br> -->
 
-  <label for="phone">phone #</label>
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="notes">Notes</label>
+    <div class="col-md-4">
+    <input id="giftID" name="jobNotes" type="text" placeholder="Notes" id="notes" class="form-control input-md">
+
+    </div>
+  </div>
+
+<br>
+
+  <!-- <label for="phone">phone #</label>
   <input type="number" name="jobPhone" id="phone">
-  <br>
+  <br> -->
 
+
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="phone">phone#</label>
+    <div class="col-md-4">
+    <input id="giftName" name="jobPhone" type="number" placeholder="phone number"  id="phone" class="form-control input-md" required="">
+
+    </div>
+  </div>
+
+<br>
+<a href="/jobs">
+back to list
+</a>
  <button type="submit">add new company</button>
-
+</fieldset>
 </form>
 <% if (typeof(errors) !== "undefined"){ %>
    <% for (let error in errors){ %>
