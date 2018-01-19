@@ -1,19 +1,26 @@
 <h1> Company Name:  <%= job.company %> </h1>
 
 
-<h3> Email/Webside:  <%= job.url %></h3>
+<h3> Email/Webside: </h3>
+<p><%= job.url %></p>
 
-<h3> Address:  <%= job.location %></h3>
+<h3> Address: </h3>
+<p><%= job.location %></p>
 
-<h3>Contac Name:  <%= job.personOfContact %></h3>
+<h3>Contac Name: </h3>
+<p><%= job.personOfContact %></p>
 
-<h3>Contac Name2:  <%= job.personOfContact2 %></h3>
+<h3>Contac Name2:</h3>
+ <p><%= job.personOfContact2 %></p>
 
-<h3> Email(contact): <%= job.email %></h3>
+<h3> Email(contact):</h3>
+<p><%= job.email %></p>
 
-<h3>Notes:   <%= job.note%></h3>
+<h3>Notes: </h3>
+<p><%= job.notes%></p>
 
-<h3>Phone Number:  <%= job.phone %></h3>
+<h3>Phone Number:</h3>
+<p><%= job.phone %></p>
 <hr>
 <a href="/jobs/<%= job._id %>/edit">
   Modify this company
