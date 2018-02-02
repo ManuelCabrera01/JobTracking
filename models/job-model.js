@@ -10,7 +10,7 @@ personOfContact: { type: String},
 personOfContact2:  {type: String},
 email: {type: String},
 notes: {type: String},
-phone: {type: Number}
+phone: {type: String}
 });
 
 const Job = mongoose.model('Job', jobSchema );
